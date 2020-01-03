@@ -6,7 +6,7 @@ namespace PracticeQuestionsInCSharp
     class MainClass
     {
         // Even or odd with switch statement
-         static string evenOrOdd(int number)
+        static string evenOrOdd(int number)
         {
             return (number % 2 == 0) ? "Even" : "Odd";
         }
@@ -32,14 +32,37 @@ namespace PracticeQuestionsInCSharp
             }
             return 0;
         }
-            
 
+
+        //Given a string, return a new string where the last 3 chars are now in upper case.
+        //If the string has less than 3 chars, uppercase whatever is there.Note that
+        //str.toUpperCase() returns the uppercase version of a string.
+        static string endUp(string str)
+        {
+            if(str.Length <= 3)
+            {
+                return str.ToUpper();
+            }
+            else
+            {
+                int cut = str.Length - 3;
+                String front = str.Substring(0, cut);
+                String back = str.Substring(cut);  // this takes from cut to the end
+                return front + back.ToUpper();
+            }
+        }
+
+
+      
         public static void Main(string[] args)
         {
             //Console.WriteLine(evenOrOdd(1));
             //Console.WriteLine(evenOrOdd(2));
-            Console.WriteLine(diff21(19));
-            Console.WriteLine(diff21(10));
+            //Console.WriteLine(diff21(19));
+            //Console.WriteLine(diff21(10));
+            Console.WriteLine(endUp("Hello"));
+            Console.WriteLine(endUp("hi there"));
+            Console.WriteLine(endUp("hi"));
 
         }
     }
