@@ -39,7 +39,7 @@ namespace PracticeQuestionsInCSharp
         //str.toUpperCase() returns the uppercase version of a string.
         static string endUp(string str)
         {
-            if(str.Length <= 3)
+            if (str.Length <= 3)
             {
                 return str.ToUpper();
             }
@@ -52,6 +52,34 @@ namespace PracticeQuestionsInCSharp
             }
         }
 
+        static int intMax(int a, int b, int c)
+        {
+            int max;
+
+            // First check between a and b
+            if (a > b)
+            {
+                max = a;
+            }
+            else
+            {
+                max = b;
+            }
+
+            // Now check between max and c
+            if (c > max)
+            {
+                max = c;
+            }
+
+            return max;
+
+            // Could use the built in Math.max(x, y) function which selects the larger
+            // of two values.
+        }
+    
+
+
 
       
         public static void Main(string[] args)
@@ -60,9 +88,12 @@ namespace PracticeQuestionsInCSharp
             //Console.WriteLine(evenOrOdd(2));
             //Console.WriteLine(diff21(19));
             //Console.WriteLine(diff21(10));
-            Console.WriteLine(endUp("Hello"));
-            Console.WriteLine(endUp("hi there"));
-            Console.WriteLine(endUp("hi"));
+            //Console.WriteLine(endUp("Hello"));
+            //Console.WriteLine(endUp("hi there"));
+            //Console.WriteLine(endUp("hi"));
+            Console.WriteLine(intMax(1, 3, 50));
+            Console.WriteLine(intMax(1, 123, 50));
+            Console.WriteLine(intMax(678, 123, 50));
 
         }
     }
