@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
+using System.Globalization;
 
 namespace PracticeQuestionsInCSharp
 {
@@ -77,11 +78,36 @@ namespace PracticeQuestionsInCSharp
             // Could use the built in Math.max(x, y) function which selects the larger
             // of two values.
         }
-    
+
+
+        //uppercase every first letter in  word with a string input
+         static string ToUpperEveryWord(string s)
+        {
+            // Check for empty string.  
+            if (string.IsNullOrEmpty(s))
+            {
+                return string.Empty;
+            }
+            //take the string and split it at every space
+            var words = s.Split(' ');
+            //initialize a empty string variable
+            var t = "";
+            //loop through , take the single word and uppercase while returning everything afterword
+            foreach (var word in words)
+            {
+                t += char.ToUpper(word[0]) + word.Substring(1) + ' ';
+            }
+            //Removes all leading and trailing white-space characters from the current string.
+            return t.Trim();
+        }
 
 
 
-      
+
+
+
+
+
         public static void Main(string[] args)
         {
             //Console.WriteLine(evenOrOdd(1));
@@ -91,10 +117,10 @@ namespace PracticeQuestionsInCSharp
             //Console.WriteLine(endUp("Hello"));
             //Console.WriteLine(endUp("hi there"));
             //Console.WriteLine(endUp("hi"));
-            Console.WriteLine(intMax(1, 3, 50));
-            Console.WriteLine(intMax(1, 123, 50));
-            Console.WriteLine(intMax(678, 123, 50));
-
+            //Console.WriteLine(intMax(1, 3, 50));
+            //Console.WriteLine(intMax(1, 123, 50));
+            //Console.WriteLine(intMax(678, 123, 50));
+            Console.WriteLine(ToUpperEveryWord("How can mirrors be real if our eyes aren't real"));
         }
     }
 }
