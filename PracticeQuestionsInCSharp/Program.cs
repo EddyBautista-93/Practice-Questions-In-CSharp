@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Globalization;
 using System.Linq;
+using System.Text;
 
 namespace PracticeQuestionsInCSharp
 {
@@ -99,6 +100,36 @@ namespace PracticeQuestionsInCSharp
             return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(phrase);
         }
 
+        //The goal of this exercise is to convert a string to a new string where
+        //each character in the new string is "(" if that character appears only once
+        //in the original string, or ")" if that character appears more than once in the
+        //original string. Ignore capitalization when determining if a character is a duplicate.
+        static string DuplicateEncode(string word)
+        {
+            //StringBuilder is a dynamic object which will expands
+            //a memory dynamically to accommodate the modifications of string
+            //instead of creating a new instance in the memory.
+            StringBuilder sb = new StringBuilder();
+            var chars = word.ToLower().ToCharArray();
+
+            foreach(char c in chars)
+            {
+                if (chars.Where(ch => ch == c).Count() > 1)
+
+                    sb.Append(")");
+                else
+                    sb.Append("(");
+            }
+            return sb.ToString();
+        }
+
+        // a shorter way of doing it from a solution on codewars
+        public static string DuplicateEncodeRemix(string word)
+        {
+            return new string(word.ToLower().Select(ch => word.ToLower().Count(innerCh => ch == innerCh) == 1 ? '(' : ')').ToArray());
+        }
+
+
 
         public static void Main(string[] args)
         {
@@ -112,8 +143,21 @@ namespace PracticeQuestionsInCSharp
             //Console.WriteLine(intMax(1, 3, 50));
             //Console.WriteLine(intMax(1, 123, 50));
             //Console.WriteLine(intMax(678, 123, 50));
-            Console.WriteLine(ToUpperEveryWord("How can mirrors be real if our eyes aren't real"));
-            Console.WriteLine(ToJadenCase("How can mirrors be real if our eyes aren't real"));
+            //Console.WriteLine(ToUpperEveryWord("How can mirrors be real if our eyes aren't real"));
+            //Console.WriteLine(ToJadenCase("How can mirrors be real if our eyes aren't real"));
+            //Console.WriteLine(DuplicateEncode("din"));
+            //Console.WriteLine("(((");
+            //Console.WriteLine(DuplicateEncode("recede"));
+            //Console.WriteLine("()()()");
+            //Console.WriteLine(DuplicateEncode("success"));
+            //Console.WriteLine(")())())");
+            Console.WriteLine(DuplicateEncodeRemix("din"));
+            Console.WriteLine("(((");
+            Console.WriteLine(DuplicateEncodeRemix("recede"));
+            Console.WriteLine("()()()");
+            Console.WriteLine(DuplicateEncodeRemix("success"));
+            Console.WriteLine(")())())");
+
         }
     }
 }
