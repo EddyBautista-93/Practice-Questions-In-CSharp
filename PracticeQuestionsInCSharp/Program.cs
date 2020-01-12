@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using System.Globalization;
+using System.Linq;
 
 namespace PracticeQuestionsInCSharp
 {
@@ -87,25 +88,16 @@ namespace PracticeQuestionsInCSharp
             if (string.IsNullOrEmpty(s))
             {
                 return string.Empty;
-            }
-            //take the string and split it at every space
-            var words = s.Split(' ');
-            //initialize a empty string variable
-            var t = "";
-            //loop through , take the single word and uppercase while returning everything afterword
-            foreach (var word in words)
-            {
-                t += char.ToUpper(word[0]) + word.Substring(1) + ' ';
-            }
-            //Removes all leading and trailing white-space characters from the current string.
-            return t.Trim();
+            } 
+            // got rid of 5 lines if code for just this! Never stop improving!!!
+            return String.Join(" ", s.Split().Select(i => Char.ToUpper(i[0]) + i.Substring(1)));
         }
 
-
-
-
-
-
+        //another way to do every first letter uppercase
+         static string ToJadenCase(string phrase)
+        {
+            return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(phrase);
+        }
 
 
         public static void Main(string[] args)
@@ -121,6 +113,7 @@ namespace PracticeQuestionsInCSharp
             //Console.WriteLine(intMax(1, 123, 50));
             //Console.WriteLine(intMax(678, 123, 50));
             Console.WriteLine(ToUpperEveryWord("How can mirrors be real if our eyes aren't real"));
+            Console.WriteLine(ToJadenCase("How can mirrors be real if our eyes aren't real"));
         }
     }
 }
