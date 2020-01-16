@@ -129,7 +129,18 @@ namespace PracticeQuestionsInCSharp
             return new string(word.ToLower().Select(ch => word.ToLower().Count(innerCh => ch == innerCh) == 1 ? '(' : ')').ToArray());
         }
 
+        static int MakeNegative(int number)
+        {
+          return -Math.Abs(number);
+        }
 
+        static void DescendingOrder(int num)
+        {
+             int[] result = num.ToString().Select(o => Convert.ToInt32(o)).ToArray();
+            
+
+            
+        }
 
         public static void Main(string[] args)
         {
@@ -151,13 +162,18 @@ namespace PracticeQuestionsInCSharp
             //Console.WriteLine("()()()");
             //Console.WriteLine(DuplicateEncode("success"));
             //Console.WriteLine(")())())");
-            Console.WriteLine(DuplicateEncodeRemix("din"));
-            Console.WriteLine("(((");
-            Console.WriteLine(DuplicateEncodeRemix("recede"));
-            Console.WriteLine("()()()");
-            Console.WriteLine(DuplicateEncodeRemix("success"));
-            Console.WriteLine(")())())");
-
+            //Console.WriteLine(DuplicateEncodeRemix("din"));
+            //Console.WriteLine("(((");
+            //Console.WriteLine(DuplicateEncodeRemix("recede"));
+            //Console.WriteLine("()()()");
+            //Console.WriteLine(DuplicateEncodeRemix("success"));
+            //Console.WriteLine(")())())");
+            //Console.WriteLine(MakeNegative(1));
+            //Console.WriteLine(MakeNegative(-5));
+            //Console.WriteLine(MakeNegative(10));
+            DescendingOrder(243);
+            DescendingOrder(24345);
+            DescendingOrder(2430589);
         }
     }
 }
