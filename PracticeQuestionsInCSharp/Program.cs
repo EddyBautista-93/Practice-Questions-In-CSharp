@@ -142,6 +142,53 @@ namespace PracticeQuestionsInCSharp
             
         }
 
+
+
+        public static bool IsPangram(string input)
+        {
+            // Create a hash table to mark the  
+            // characters present in the string 
+            // By default all the elements of  
+            // mark would be false. 
+            bool[] mark = new bool[26];
+
+            // For indexing in mark[] 
+            int index = 0;
+
+            // Traverse all characters 
+            for (int i = 0; i < input.Length; i++)
+            {
+                // If uppercase character, subtract 'A' 
+                // to find index. 
+                if ('A' <= input[i] &&
+                        input[i] <= 'Z')
+
+                    index = input[i] - 'A';
+
+                // If lowercase character,  
+                // subtract 'a' to find 
+                // index. 
+                else if ('a' <= input[i] &&
+                            input[i] <= 'z')
+
+                    index = input[i] - 'a';
+
+                // Mark current character 
+                mark[index] = true;
+            }
+
+            // Return false if any 
+            // character is unmarked 
+            for (int i = 0; i <= 25; i++)
+                if (mark[i] == false)
+                    return (false);
+
+            // If all characters 
+            // were present 
+            return (true);
+
+            throw new NotImplementedException();
+        }
         public static void Main(string[] args)
         {
             //Console.WriteLine(evenOrOdd(1));
