@@ -189,6 +189,14 @@ namespace PracticeQuestionsInCSharp
 
             throw new NotImplementedException();
         }
+
+        //FIRST go in expression bodied members in c#
+        public static string Speak(string name) => $"One for {name}, one for me.";
+
+
+
+
+
         public static void Main(string[] args)
         {
             //Console.WriteLine(evenOrOdd(1));
@@ -218,9 +226,12 @@ namespace PracticeQuestionsInCSharp
             //Console.WriteLine(MakeNegative(1));
             //Console.WriteLine(MakeNegative(-5));
             //Console.WriteLine(MakeNegative(10));
-            DescendingOrder(243);
-            DescendingOrder(24345);
-            DescendingOrder(2430589);
+            //DescendingOrder(243);
+            //DescendingOrder(24345);
+            //DescendingOrder(2430589);
+            Console.WriteLine(Speak("EDDY"));
+            Console.WriteLine(Speak("CELESTE"));
+
         }
     }
 }
