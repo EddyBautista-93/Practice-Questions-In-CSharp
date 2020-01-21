@@ -1,0 +1,5 @@
+/Users/eddybautista/Projects/PracticeQuestionsInCSharp/PracticeQuestionsInCSharp/obj/Debug/PracticeQuestionsInCSharp.csprojAssemblyReference.cache
+/Users/eddybautista/Projects/PracticeQuestionsInCSharp/PracticeQuestionsInCSharp/bin/Debug/PracticeQuestionsInCSharp.exe
+/Users/eddybautista/Projects/PracticeQuestionsInCSharp/PracticeQuestionsInCSharp/bin/Debug/PracticeQuestionsInCSharp.pdb
+/Users/eddybautista/Projects/PracticeQuestionsInCSharp/PracticeQuestionsInCSharp/obj/Debug/PracticeQuestionsInCSharp.exe
+/Users/eddybautista/Projects/PracticeQuestionsInCSharp/PracticeQuestionsInCSharp/obj/Debug/PracticeQuestionsInCSharp.pdb
