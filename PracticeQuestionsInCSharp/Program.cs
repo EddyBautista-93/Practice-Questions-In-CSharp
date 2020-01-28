@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Collections.ObjectModel;
 
 namespace PracticeQuestionsInCSharp
 {
@@ -222,6 +223,13 @@ namespace PracticeQuestionsInCSharp
             return "YES";
         }
 
+        static string Reverse(String x) => string.Join(" ", x.Split(' ').Select(s => new String(s.Reverse().ToArray())));
+
+
+
+
+
+
 
 
 
@@ -257,8 +265,10 @@ namespace PracticeQuestionsInCSharp
             //DescendingOrder(243);
             //DescendingOrder(24345);
             //DescendingOrder(2430589);
-            Console.WriteLine(Speak("EDDY"));
-            Console.WriteLine(Speak("CELESTE"));
+            //Console.WriteLine(Speak("EDDY"));
+            //Console.WriteLine(Speak("CELESTE"));
+            Console.WriteLine(Reverse("This is an example!"));
+
 
         }
     }
