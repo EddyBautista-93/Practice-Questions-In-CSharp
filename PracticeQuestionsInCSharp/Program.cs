@@ -225,6 +225,14 @@ namespace PracticeQuestionsInCSharp
 
         static string Reverse(String x) => string.Join(" ", x.Split(' ').Select(s => new String(s.Reverse().ToArray())));
 
+        public static int Test(string numbers)
+        {
+            var ints = numbers.Split(' ').Select(int.Parse).ToList();
+            var unique = ints.GroupBy(n => n % 2).OrderBy(c => c.Count()).First().First();
+            return ints.FindIndex(c => c == unique) + 1;
+
+        }
+
 
 
 
@@ -267,7 +275,8 @@ namespace PracticeQuestionsInCSharp
             //DescendingOrder(2430589);
             //Console.WriteLine(Speak("EDDY"));
             //Console.WriteLine(Speak("CELESTE"));
-            Console.WriteLine(Reverse("This is an example!"));
+            //Console.WriteLine(Reverse("This is an example!"));/
+            Console.WriteLine(Test("213243542321"));
 
 
         }
