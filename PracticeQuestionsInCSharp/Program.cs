@@ -232,6 +232,10 @@ namespace PracticeQuestionsInCSharp
             return ints.FindIndex(c => c == unique) + 1;
 
         }
+        public static int[] DeleteNth(int[] arr, int x)
+        {
+            return arr.Where((t, i) => arr.Take(i + 1).Count(s => s == t) <= x).ToArray();
+        }
 
 
 
