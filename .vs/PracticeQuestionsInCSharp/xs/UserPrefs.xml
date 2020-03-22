@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{21DABA7C-D8C0-4007-A461-8AE3BD448381}|Default">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="PracticeQuestionsInCSharp/Program.cs" Line="238" Column="10" />
+      <File FileName="../../Desktop/hackerank/C#/triplets.cs" Line="1" Column="1" />
+      <File FileName="PracticeQuestionsInCSharp/Program.cs" Line="287" Column="43" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.PracticeQuestionsInCSharp PreferredExecutionTarget="MonoDevelop.Default" />
