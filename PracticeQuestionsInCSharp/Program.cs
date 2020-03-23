@@ -241,7 +241,7 @@ namespace PracticeQuestionsInCSharp
 
         static List<int> compareTriplets(List<int> a, List<int> b)
         {
-            //vreates a score list to compare the two
+            //creates a score list to compare the two
             List<int> scores = new List<int>() { 0, 0 };
             //loops throygh both arrays
             for (int i = 0; i < a.Count; i++)
@@ -252,6 +252,14 @@ namespace PracticeQuestionsInCSharp
             }
             Console.WriteLine(scores);
             return scores;
+        }
+
+        static long aVeryBigSum(long[] ar)
+        {
+            long sum = ar.Sum();
+            Console.WriteLine(sum);
+            return sum;
+
         }
 
 
@@ -297,11 +305,13 @@ namespace PracticeQuestionsInCSharp
             //Console.WriteLine(Speak("CELESTE"));
             //Console.WriteLine(Reverse("This is an example!"));/
             //Console.WriteLine(Test("213243542321"));÷
-            List<int> alice = new List<int>() { 5, 6, 7 };
-            List<int> bob = new List<int>() { 3, 6, 10 };
-            alice.ForEach(Console.WriteLine);
-            bob.ForEach(Console.WriteLine);
+            //List<int> alice = new List<int>() { 5, 6, 7 };
+            //List<int> bob = new List<int>() { 3, 6, 10 };
+            //alice.ForEach(Console.WriteLine);
+            //bob.ForEach(Console.WriteLine);
             //compareTriplets(alice, bob);
+            long[] bigSumArray = { 1000000001, 1000000002, 1000000003, 1000000004, 1000000005 };
+            aVeryBigSum(bigSumArray);
 
         }
     }

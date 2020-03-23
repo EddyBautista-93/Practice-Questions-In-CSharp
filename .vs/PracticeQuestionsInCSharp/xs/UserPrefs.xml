@@ -1,9 +1,19 @@
 ﻿<Properties StartupConfiguration="{21DABA7C-D8C0-4007-A461-8AE3BD448381}|Default">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="../../Desktop/hackerank/C#/triplets.cs" Line="1" Column="1" />
-      <File FileName="PracticeQuestionsInCSharp/Program.cs" Line="287" Column="43" />
+      <File FileName="PracticeQuestionsInCSharp/Program.cs" Line="314" Column="38" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PracticeQuestionsInCSharp" expanded="True">
+            <Node name="PracticeQuestionsInCSharp" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.PracticeQuestionsInCSharp PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
