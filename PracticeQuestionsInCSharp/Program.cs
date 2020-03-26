@@ -262,6 +262,11 @@ namespace PracticeQuestionsInCSharp
 
         }
 
+        public static int diagonalDifference(List<List<int>> arr)
+        {
+
+        }
+
 
 
 
@@ -310,8 +315,8 @@ namespace PracticeQuestionsInCSharp
             //alice.ForEach(Console.WriteLine);
             //bob.ForEach(Console.WriteLine);
             //compareTriplets(alice, bob);
-            long[] bigSumArray = { 1000000001, 1000000002, 1000000003, 1000000004, 1000000005 };
-            aVeryBigSum(bigSumArray);
+            //long[] bigSumArray = { 1000000001, 1000000002, 1000000003, 1000000004, 1000000005 };
+            //aVeryBigSum(bigSumArray);
 
         }
     }
